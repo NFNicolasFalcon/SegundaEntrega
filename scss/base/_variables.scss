@@ -15,7 +15,7 @@ $textColor:rgb(240, 248, 255);
 }
 
 
-@mixin stilosTexto ($fontsize,$textaling,$color){
+@mixin estilosTexto ($fontsize,$textaling,$color){
     font-size:$fontsize;
     text-align:$textaling;
     color:$color;

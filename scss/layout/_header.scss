@@ -26,10 +26,10 @@
   }  
 
 h1{
-  @include stilosTexto(calc(1.375rem + 1.5vw),center,$textColor )
+  @include estilosTexto(calc(1.375rem + 1.5vw),center,$textColor )
 }
 h2{
-  @include stilosTexto(large,center,$textColor)
+  @include estilosTexto(large,center,$textColor)
 }
 .logo{
   width: 3.4rem;

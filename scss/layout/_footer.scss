@@ -1,0 +1,19 @@
+footer{
+    background-image: url(../img/fondoHeader.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 200px;
+    padding: 10px;
+
+    a{
+        text-decoration: none;
+        color: $textColor;
+        font-size-adjust: unset;
+        font-weight: bolder;
+        align-items: center;
+    }
+}
+
+.containerLinks{
+    @extend %flexBasico;
+}

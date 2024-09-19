@@ -1,0 +1,22 @@
+
+$colorVerde:#194448;
+$textColor:rgb(240, 248, 255);
+
+%gridBasico{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+}
+%flexBasico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@mixin stilosTexto ($fontsize,$textaling,$color){
+    font-size:$fontsize;
+    text-align:$textaling;
+    color:$color;
+}

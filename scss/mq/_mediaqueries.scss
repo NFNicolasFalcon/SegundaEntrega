@@ -1,0 +1,25 @@
+@media (max-width:600px)
+{
+    h2{
+        display: none;
+    }
+    .containerLinks a{
+        font-size:small;
+    }
+
+}
+@media (min-width:600px)
+{
+    .containerServicios{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+     }
+    .containerProductos{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    }
+}

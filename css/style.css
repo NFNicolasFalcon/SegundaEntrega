@@ -154,4 +154,66 @@ body {
   justify-content: space-between;
 }
 
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.cart.hidden {
+  transform: translateX(100%);
+}
+
+.cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.cart p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.cart-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-button:hover {
+  color: #007bff;
+}
+
+#cartCount {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+.cart-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
 /*# sourceMappingURL=style.css.map */

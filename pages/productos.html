@@ -15,12 +15,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Productos</title>
     <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+  </head>
+  <body>
     <header class="containerHeader">
+      <div class="containerLogo">
         <div class="containerLogo">
           <img class="logo" src="../img/logo2.png" alt="Logo">
         </div>
+        <div class="cart-container">
+          <button class="cart-button" id="openCart">
+            🛒 <span id="cartCount">0</span>
+          </button>
+        </div>
+        <aside id="cart" class="cart hidden">
+          <h2>Carrito de Compras</h2>
+          <ul id="cartItems">
+              
+              <li id="emptyCartMessage">El carrito está vacío.</li>
+          </ul>
+          <p><strong>Total:</strong> $<span id="cartTotal">0</span></p>
+          <button id="closeCart" class="btn btn-secondary">Cerrar</button>
+      </aside>
+      </div>
+      
         <div class="title">
           <h1>Agronexo Productos</h1>
           <h2>Cooperativa Agricola Ganadera de Lartigau y Tornquist LTDA</h2>
@@ -47,73 +64,79 @@
                   </ul>
                 </div>
               </div>
-          </nav>
+            </nav>
         </div>
       </header>
 
-      <main>
-        <div class="containerProductos">
+    <main>
+      <div class="containerProductos">
           <div class="card" style="width: 20rem;">
-              <img src="../img/trigo.png" class="card-img-top" alt="Trigo">
-              <div class="card-body">
+            <img src="../img/imgproductos/trigo.png" class="card-img-top" alt="Trigo">
+            <div class="card-body">
                 <h5 class="card-title">ACA FRESNO</h5>
-                <p class="card-text">Cultivar de ciclo largo y origen frances, con el mas alto potencial de rendimiento del mercado. Excelente perfil sanitario y muy buena calidad comercial.</p>
+                <p class="card-text">Cultivar de ciclo largo y origen francés, con el más alto potencial de rendimiento del mercado. Excelente perfil sanitario y muy buena calidad comercial.</p>
                 <div class="ContainerBotones">
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                  <div class="counter">
-                    <button onclick="decrement('quantity1')">-</button>
-                    <input type="text" id="quantity1" value="1" readonly>
-                    <button onclick="increment('quantity1')">+</button>
-                  </div>
-                </div>
-                
-              </div>
-            </div><div class="card" style="width: 20rem;">
-              <img src="../img/sorgo.png" class="card-img-top" alt="Sorgo">
-              <div class="card-body">
-                <h5 class="card-title">ACA 717 BMR</h5>
-                <p class="card-text">Híbrido BMR tipo Sudan, ideal para pastoreo directo. Alta tasa de rebrote. Excelente capacidad para acumular biomasa. Muy buena digestibilidad y excelente comportamiento a vuelco.
-                  Excelente digestibilidad (dado su condición BMR).</p>
-                  <div class="ContainerBotones">
-                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                    <button class="btn btn-primary add-to-cart" data-id="1" data-name="BOLSAS DE ACA FRESNO" data-price="500">Añadir al carrito</button>
                     <div class="counter">
-                      <button onclick="decrement('quantity2')">-</button>
-                      <input type="text" id="quantity2" value="1" readonly>
-                      <button onclick="increment('quantity2')">+</button>
+                        <button class="decrement" data-quantity="quantity1">-</button>
+                        <input type="text" id="quantity1" value="1" readonly>
+                        <button class="increment" data-quantity="quantity1">+</button>
                     </div>
-                  </div>
-              </div>
-            </div><div class="card" style="width: 20rem;">
-              <img src="../img/girasol.png" class="card-img-top" alt="Girasol">
-              <div class="card-body">
-                <h5 class="card-title">ACA 869 DM</h5>
-                <p class="card-text">Híbrido de ciclo intermedio, con alto contenido de aceite, recomendado para las regiones norte, SO, Oeste y Sur de BA. Excelente perfil sanitario: resistente a Downy Mildew,Roya Negra y Moderadamente resistente a Verticillium.</p>
-                <div class="ContainerBotones">
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                  <div class="counter">
-                    <button onclick="decrement('quantity3')">-</button>
-                    <input type="text" id="quantity3" value="1" readonly>
-                    <button onclick="increment('quantity3')">+</button>
-                  </div>
                 </div>
-              </div>
-            </div><div class="card" style="width: 20rem;">
-              <img src="../img/maiz.png" class="card-img-top" alt="Maiz">
-              <div class="card-body">
-                <h5 class="card-title">ACA 470 VT3 PRO</h5>
-                <p class="card-text">Híbrido simple de ciclo intermedio corto. La mejor combinacion de estabilidad, potencial y precocidad. Alta tasa de secado de grano en planta. Muy buena capacidad compensatoria para explorar medias y bajas densidades. Amplia zona de adaptación tanto para siembras tempranas y tardías.</p>
-                <div class="ContainerBotones">
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                  <div class="counter">
-                    <button onclick="decrement('quantity4')">-</button>
-                    <input type="text" id="quantity4" value="1" readonly>
-                    <button onclick="increment('quantity4')">+</button>
-                  </div>
-                </div>
-              </div>
             </div>
         </div>
-      </main>
+        <div class="card" style="width: 20rem;">
+          <img src="../img/imgproductos/sorgo.png" class="card-img-top" alt="Sorgo">
+          <div class="card-body">
+              <h5 class="card-title">ACA 717 BMR</h5>
+              <p class="card-text">Híbrido BMR tipo Sudan, ideal para pastoreo directo. Alta tasa de rebrote. Excelente capacidad para acumular biomasa. Muy buena digestibilidad y excelente comportamiento a vuelco.
+                Excelente digestibilidad (dado su condición BMR).</p>
+              <div class="ContainerBotones">
+                  <button class="btn btn-primary add-to-cart" data-id="2" data-name="BOLSAS DE ACA 717 BMR" data-price="500">Añadir al carrito</button>
+                  <div class="counter">
+                      <button class="decrement" data-quantity="quantity2">-</button>
+                      <input type="text" id="quantity2" value="1" readonly>
+                      <button class="increment" data-quantity="quantity2">+</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img src="../img/imgproductos/girasol.png" class="card-img-top" alt="Girasol">
+        <div class="card-body">
+            <h5 class="card-title">ACA 869 DM</h5>
+            <p class="card-text">Híbrido de ciclo intermedio, con alto contenido de aceite, recomendado para las regiones norte, SO, Oeste y Sur de BA. Excelente perfil sanitario: resistente a Downy Mildew,Roya Negra y Moderadamente resistente a Verticillium.</p>
+            <div class="ContainerBotones">
+                <button class="btn btn-primary add-to-cart" data-id="3" data-name="BOLSAS DE ACA 869 DM" data-price="500">Añadir al carrito</button>
+                <div class="counter">
+                    <button class="decrement" data-quantity="quantity3">-</button>
+                    <input type="text" id="quantity3" value="1" readonly>
+                    <button class="increment" data-quantity="quantity3">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card" style="width: 20rem;">
+      <img src="../img/imgproductos/maiz.png" class="card-img-top" alt="Maiz">
+      <div class="card-body">
+          <h5 class="card-title">ACA 470 VT3 PRO</h5>
+          <p class="card-text">Híbrido simple de ciclo intermedio corto. La mejor combinacion de estabilidad, potencial y precocidad. Alta tasa de secado de grano en planta. Muy buena capacidad compensatoria para explorar medias y bajas densidades. Amplia zona de adaptación tanto para siembras tempranas y tardías.</p>
+          <div class="ContainerBotones">
+              <button class="btn btn-primary add-to-cart" data-id="4" data-name="BOLSAS DE ACA 470 VT3 PRO" data-price="500">Añadir al carrito</button>
+              <div class="counter">
+                  <button class="decrement" data-quantity="quantity4">-</button>
+                  <input type="text" id="quantity4" value="1" readonly>
+                  <button class="increment" data-quantity="quantity4">+</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+        </div>
+      </div>
+    </main>
+
       <footer>
         <div class="containerLinks">
           <a href="https://www.instagram.com/cooperativa.agronexo/" target="_blank">Instagram</a>
@@ -125,22 +148,9 @@
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script>
+     <script src="../js/main.js"></script>
     
-        function increment(id) {
-           let quantity = document.getElementById(id).value;
-            quantity++;
-            document.getElementById(id).value = quantity;
-        }
-
-        function decrement(id) {
-          
-            let quantity = document.getElementById(id).value;
-            if (quantity > 1) {
-                quantity--;
-                document.getElementById(id).value = quantity;
-            }
-        }
-    </script>
+       
+    
 </body>
 </html>
